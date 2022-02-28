@@ -1,0 +1,3 @@
+.caption .media .field,.caption .media .field *{float:none;margin:unset}
+.cke_reset_all .cke_dialog_body fieldset:not(.fieldgroup)>legend{position:relative}
+.paragraph--unpublished{background-color:#fff4f4}

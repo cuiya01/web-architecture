@@ -1,0 +1,77 @@
+
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    #container {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    #map {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+    }
+
+    #tooltip {
+        position: absolute;
+        visibility: hidden;
+        z-index: 2;
+        right: 0;
+        top: 0;
+        width: 20%;
+        height: auto;
+        min-height: 100px;
+
+
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "icon title title"
+        "item-a item-a ."
+        "item-b item-b .";
+
+        background-color: rgb(255, 216, 145);
+        border: 1px solid #888;
+    }
+
+    .title {
+        grid-area: title;
+        font-weight: bold;
+        margin: 4px;
+    }
+
+    .item-a {
+        grid-area: item-a;
+        margin: 4px;
+    }
+
+    .item-b {
+        grid-area: item-b;
+        margin: 4px;
+    }
+
+    .icon {
+        grid-area: icon;
+        margin: 4px;
+        max-width: 50%;
+        height: auto;
+        place-self: center;
+    }
+
+    .marker {
+        background-image: url('../img/mapbox-icon.png');
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+  }

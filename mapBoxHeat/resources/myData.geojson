@@ -1,0 +1,155 @@
+{ "type": "FeatureCollection",
+    "features": [
+        {"type": "Feature", 
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.124603,51.500896]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "Bigben",
+                "heat":1.775
+            }
+        },
+
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ -0.09929038196690297,51.508676367797285]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "Tate Morden",
+                "heat":0.894
+            }
+        },
+
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ -0.11954297294079794,51.50343084692139]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "London Eye",
+                "heat":7.708
+            }
+        },
+
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ -0.12827467479226445,51.50906276178127]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "National Gallery",
+                "heat":8.479
+            }
+        },
+
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ -0.12701024595593177,51.5196135595575]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "British museum",
+                "heat":8.613
+            }
+        },
+
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ -0.07584961469949537,51.50947490124]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "Tower of London",
+                "heat":1.314
+            }
+        },
+
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ -0.17216927294105142,51.49675940777218]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "Victoria and Albert Museum",
+                "heat":7.717
+            }
+        },
+
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ -0.07536723061262272,51.50558326255463 ]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "London Tower Bridge",
+                "heat":9.453
+            }
+        },
+
+        
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ -0.127267116069872 ,51.499805270230155 ]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "Westminster Abbey",
+                "heat":7.444
+            }
+        },
+            
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [ -0.16569155196675464 , 51.50773254598538 ]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "Hyde Park",
+                "heat":8.997
+            }
+        },
+
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.08643840389352578 , 51.50467878549576 ]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "The Shard",
+                "heat":10.594
+            }
+        },
+
+        {"type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-0.12808646579321398 ,  51.50812677208848 ]
+            },
+            "properties": {
+                "title": "Mapbox",
+                "description": "Trafalgar Square",
+                "heat":6.081
+            }
+        }
+
+
+
+    ]
+}
+
+
+
+ 

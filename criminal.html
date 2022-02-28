@@ -1,0 +1,167 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+ 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=WEnnHYyPP0C0hdrB9ELEHGqD73O87a3O"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/Heatmap/2.0/src/Heatmap_min.js"></script>
+
+ 
+ 
+    <title>Crime-HotMap</title>
+ 
+    <style type="text/css">
+    ul,li{list-style: none;margin:0;padding: 0}
+ 
+    html{height:100%}
+    body{height:100%;margin:0px;padding:0px}
+    #container{height:100%;width:77%;float:left;border-right:2px solid #e0e0e0;}
+    #r-result{height:100%;width:20%;float:left;}
+    .btn-container{margin:40px;}
+    fieldset{border: 1px solid;border-radius: 5px;}
+    fieldset label{font-size: 10px; line-height: 30px;}
+    .btn{
+    	color: #333;background-color: #fff;display: inline-block;padding: 6px 12px;font-size: 14px;
+		font-weight: normal;line-height: 1.5;border: 1px solid #ccc;border-radius: 4px;
+		margin-top: 5px;margin-bottom: 5px;}	
+	.btn:hover{color: #333;background-color: #ebebeb;border-color: #adadad;}
+	.text-primary{
+		font-weight: bold;
+	}
+	textarea{border: 1px solid #ccc;border-radius: 4px;}
+	textarea:focus{border-color: #669fe9;outline: 0;box-shadow: inset 0 1px 1px rgba(26, 25, 25, 0.075),0 0 8px rgba(102,175,233,0.6);}
+	.color-list li{font-size: 10px; line-height: 30px;}
+    </style>	
+</head>
+<body>
+<div id="container">
+</div>
+<div id="r-result">
+    <div class="btn-container">
+    	<fieldset>
+    		 <legend>Crime Heatmap </legend>
+    	<label>Set heat map radius0-100</label>
+    	<input type="range" max="100" style = "width:150px" min="1" value="20" onchange="setRadius(this.value)">
+    	<span id="radius-result" class="text-primary">20</span>
+    	<br/>
+    	<label>Set heat map transparency0-100</label>
+    	<input type="range" max="100" style = "width:150px" min="1" value="80" onchange="setOpacity(this.value)">
+    	<span id="opacity-result" class="text-primary">80</span>
+		<br/>
+		<label>Set the gradient interval of the heat map</label>
+ 
+		<ul class="color-list">
+			<li> Starting color:<input data-key="0.1" type="color" value="#66FF00" onchange="setGradient()"/></li>
+			<li> Middle color: <input  data-key="0.5" type="color" value="#FFAA00" onchange="setGradient()"/></li>
+			<li> End color: <input data-key="1.0" type="color" value="#FF0000" onchange="setGradient()"/></li>
+		</ul>
+ 
+        
+    </div>
+ 
+</div>
+<script type="text/javascript">
+    var map = new BMap.Map("container");          // Set Map example
+ 
+    var point = new BMap.Point(-0.101453,51.5194133);
+    map.centerAndZoom(point, 11);             // Initialize the map, set the center point coordinates and map level
+    map.enableScrollWheelZoom(); // Allow scroll wheel to zoom
+  
+ 
+ 
+ 
+    var points =[
+
+
+
+{"lat":51.5540666,"lng":0.134017,"count":38988},
+{"lat":51.6049673,"lng":-0.2076295,"count":55331},
+{"lat":39.9689532,"lng":-82.9376804,"count":30704},
+{"lat":35.3678727,"lng":-94.7935587,"count":57075},
+{"lat":43.2278531,"lng":-72.9387126,"count":44662},
+{"lat":39.9259463,"lng":-75.1196199,"count":59038},
+{"lat":51.376165,"lng":-0.098234,"count":66421},
+{"lat":51.5250366,"lng":-0.3413965,"count":58995},
+{"lat":42.0027181,"lng":-72.5441445,"count":58084},
+{"lat":41.0262417,"lng":-73.6281964,"count":52607},
+{"lat":51.573445,"lng":-0.0724376,"count":61535},
+{"lat":51.4990156,"lng":-0.22915,"count":39997},
+{"lat":51.5906113,"lng":-0.1109709,"count":58136},
+{"lat":51.5881627,"lng":-0.3422851,"count":31591},
+{"lat":51.577924,"lng":0.2120829,"count":34016},
+{"lat":51.5351832,"lng":-0.4481378,"count":48785},
+{"lat":51.4828358,"lng":-0.3882062,"count":48311},
+{"lat":51.5465063,"lng":-0.1058058,"count":50706},
+{"lat":51.4990805,"lng":-0.1938253,"count":37136},
+{"lat":51.41233,"lng":-0.300689,"count":23197},
+{"lat":51.4935082,"lng":-0.1178424,"count":63603},
+{"lat":51.4414579,"lng":-0.0117006,"count":54435},
+{"lat":51.4700223,"lng":-0.4542955,"count":3371},
+{"lat":43.1466739,"lng":-88.3067614,"count":26769},
+{"lat":51.5255162,"lng":0.0352163,"count":67172},
+{"lat":51.5748179,"lng":0.0507539,"count":47026},
+{"lat":51.4613054,"lng":-0.3037709,"count":23737},
+{"lat":51.502781,"lng":-0.087738,"count":65122},
+{"lat":42.1500353,"lng":-71.7632878,"count":25777},
+{"lat":51.5202607,"lng":-0.0293396,"count":65064},
+{"lat":51.5886383,"lng":-0.0117625,"count":46109},
+{"lat":51.4568274,"lng":-0.1896638,"count":50478},
+{"lat":39.8366528,"lng":-105.0372046,"count":101781},
+]
+    
+ 
+    if(!isSupportCanvas()){
+    	alert('The heat map currently only supports browsers with canvas support, and the browser you are using cannot use the heat map function~')
+    }
+ 
+    	
+
+ 
+
+	heatmapOverlay = new BMapLib.HeatmapOverlay({"radius":20});
+	map.addOverlay(heatmapOverlay);
+	heatmapOverlay.setDataSet({data:points,max:60000});
+   
+ 
+    function setRadius(radius){
+    	document.getElementById("radius-result").innerHTML = radius;
+        heatmapOverlay.setOptions({"radius":radius})
+    }
+ 
+    function setOpacity(opacity){
+    	document.getElementById("opacity-result").innerHTML = opacity;
+        heatmapOverlay.setOptions({"opacity":opacity})
+    }
+ 
+    function toggle(){
+        heatmapOverlay.toggle()
+    }
+ 
+     function setGradient(){
+ 
+
+     	var gradient = {};
+     	var colors = document.querySelectorAll("input[type='color']");
+     	colors = [].slice.call(colors,0);
+     	colors.forEach(function(ele){
+			gradient[ele.getAttribute("data-key")] = ele.value; 
+     	});
+        heatmapOverlay.setOptions({"gradient":gradient});
+    }
+ 
+ 
+    function isSupportCanvas(){
+        var elem = document.createElement('canvas');
+        return !!(elem.getContext && elem.getContext('2d'));
+    }
+
+//marker
+
+
+
+
+</script>
+</body>
+</html>
