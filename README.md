@@ -1,6 +1,7 @@
 # CASA0017 --triptrip
  This contains the source code of our website -- triptrip.
 
+![TripTrip - We Tried](https://user-images.githubusercontent.com/92298865/194151985-19ae9b3b-9da1-413f-a2ae-0fab48ba2fa0.png)
 
 # About this project
 In this project, we mainly used the API of google map, google trends, Instagram, and some public data sets to collect the list of attractions, search popularity, number of crimes in a specific area, transportation methods, photos and pictures of tourist spots, and other resources that users are most concerned about. We hope to help users find the destinations they want to visit and plan their trips reasonably.
